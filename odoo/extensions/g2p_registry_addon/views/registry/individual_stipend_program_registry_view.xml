@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_g2p_individual_stipend_program_registry" model="ir.actions.act_window">
+        <field name="name">Individual Stipend Program Registry</field>
+        <field name="res_model">g2p.individual.stipend.program.registry</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_g2p_individual_stipend_program_registry_tree" model="ir.ui.view">
+        <field name="name">g2p.individual.stipend.program.registry.tree</field>
+        <field name="model">g2p.individual.stipend.program.registry</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="internal_record_id"/>
+                <field name="stipend_program_name"/>
+                <field name="work_type"/>
+                <field name="hours_contributed"/>
+                <field name="contribution_from_date"/>
+                <field name="contribution_to_date"/>
+                <field name="record_status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_g2p_individual_stipend_program_registry_form" model="ir.ui.view">
+        <field name="name">g2p.individual.stipend.program.registry.form</field>
+        <field name="model">g2p.individual.stipend.program.registry</field>
+        <field name="arch" type="xml">
+            <form string="Individual Stipend Program Registry">
+                <sheet>
+                    <group string="Identity">
+                        <field name="internal_record_id"/>
+                        <field name="record_status"/>
+                    </group>
+                    <group string="Stipend contribution">
+                        <field name="stipend_program_name"/>
+                        <field name="work_type"/>
+                        <field name="hours_contributed"/>
+                        <field name="contribution_from_date"/>
+                        <field name="contribution_to_date"/>
+                        <field name="contribution_date_range"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

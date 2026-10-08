@@ -1,2 +1,3 @@
 from .register_household import RegisterHousehold
 from .registry_farmer import RegistryFarmer
+from .registry_individual_stipend_program import RegistryIndividualStipendProgram

@@ -13,6 +13,7 @@
         "views/priority/priority_rule_view.xml",
         "views/registry/farmer_registry_view.xml",
         "views/registry/household_registry_view.xml",
+        "views/registry/individual_stipend_program_registry_view.xml",
         "views/bgtask/bgtask_view.xml",
         "views/menu.xml",
     ],

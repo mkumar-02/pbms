@@ -12,6 +12,9 @@
         <group name="beneficiary_search_household" invisible="target_registry != 'households'">
           <widget name="g2p_beneficiaries_widget" model="g2p.register.households" id="household_beneficiary_search_widget"/>
         </group>
+        <group name="beneficiary_search_stipend" invisible="target_registry != 'individual_stipend_program'">
+          <widget name="g2p_beneficiaries_widget" model="g2p.individual.stipend.program.registry" id="stipend_beneficiary_search_widget"/>
+        </group>
       </xpath>
     </field>
   </record>

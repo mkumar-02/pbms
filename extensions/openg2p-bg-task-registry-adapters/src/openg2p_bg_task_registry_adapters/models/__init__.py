@@ -1,5 +1,9 @@
 from .beneficiary_list_summary_farmer import BeneficiaryListSummaryFarmer
 from .beneficiary_list_summary_household import BeneficiaryListSummaryHousehold
+from .beneficiary_list_summary_individual_stipend_program import (
+    BeneficiaryListSummaryIndividualStipendProgram,
+)
 from .register_household import G2PRegisterHousehold
 from .registry_farmer import G2PFarmerRegistry
+from .registry_individual_stipend_program import G2PIndividualStipendProgramRegistry
 from .registry_type import G2PRegistryType

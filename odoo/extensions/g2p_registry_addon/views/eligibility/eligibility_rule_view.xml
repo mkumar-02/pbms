@@ -19,6 +19,11 @@
                        options="{'model': 'g2p.register.households'}"
                        invisible="target_registry != 'households'"/>
 
+                <!-- Domain widget for the 'individual_stipend_program' type -->
+                <field name="pbms_domain" widget="domain"
+                       options="{'model': 'g2p.individual.stipend.program.registry'}"
+                       invisible="target_registry != 'individual_stipend_program'"/>
+
             </xpath>
         </field>
     </record>

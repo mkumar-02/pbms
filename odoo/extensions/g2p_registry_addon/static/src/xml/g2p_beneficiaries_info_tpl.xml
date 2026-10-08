@@ -59,6 +59,15 @@
                                 <th class="px-2 py-1">Education Level</th>
                                 <th class="px-2 py-1">Country</th>
                             </t>
+                            <t t-if="state.target_registry === 'individual_stipend_program'">
+                                <th class="px-2 py-1">Internal ID</th>
+                                <th class="px-2 py-1">Stipend Program</th>
+                                <th class="px-2 py-1">Work Type</th>
+                                <th class="px-2 py-1 text-center">Hours</th>
+                                <th class="px-2 py-1">From</th>
+                                <th class="px-2 py-1">To</th>
+                                <th class="px-2 py-1">Status</th>
+                            </t>
                             <t t-if="state.target_registry === 'households'">
                                 <th class="px-2 py-1">Internal ID</th>
                                 <th class="px-2 py-1">Functional ID</th>
@@ -106,6 +115,15 @@
                                         <td class="px-2 py-1"><t t-esc="record.education_level"/></td>
                                         <td class="px-2 py-1"><t t-esc="record.country_code"/></td>
                                     </t>
+                                    <t t-if="state.target_registry === 'individual_stipend_program'">
+                                        <td class="px-2 py-1 text-muted"><t t-esc="record.internal_record_id"/></td>
+                                        <td class="px-2 py-1 fw-semibold text-primary"><t t-esc="record.stipend_program_name"/></td>
+                                        <td class="px-2 py-1"><t t-esc="record.work_type"/></td>
+                                        <td class="px-2 py-1 text-center"><t t-esc="record.hours_contributed"/></td>
+                                        <td class="px-2 py-1"><t t-esc="record.contribution_from_date"/></td>
+                                        <td class="px-2 py-1"><t t-esc="record.contribution_to_date"/></td>
+                                        <td class="px-2 py-1"><t t-esc="record.record_status"/></td>
+                                    </t>
                                     <t t-if="state.target_registry === 'households'">
                                         <td class="px-2 py-1 text-muted"><t t-esc="record.internal_record_id"/></td>
                                         <td class="px-2 py-1 fw-semibold text-primary"><t t-esc="record.functional_record_id"/></td>
@@ -141,6 +159,10 @@
                                     No records found.
                                 </td>
                                 <td t-elif="state.target_registry === 'farmer'" colspan="10" class="text-center text-muted py-4">
+                                    <i class="fa fa-inbox fa-2x d-block mb-2"/>
+                                    No records found.
+                                </td>
+                                <td t-elif="state.target_registry === 'individual_stipend_program'" colspan="7" class="text-center text-muted py-4">
                                     <i class="fa fa-inbox fa-2x d-block mb-2"/>
                                     No records found.
                                 </td>
